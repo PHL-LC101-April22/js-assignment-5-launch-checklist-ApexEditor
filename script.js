@@ -2,49 +2,53 @@
 
 // //const { addDestinationInfo, formSubmission } = require("./scriptHelper");
 
-// window.addEventListener("load", function() {
+window.addEventListener("load", function() {
 
-//     fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response) {
-//     response.json().then( function(json) {
-//         let div = document.getElementById('missionTarget');
-//           let random = Math.floor((Math.random() * json.length)+ 0);
+    fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response) {
+    response.json().then( function(json) {
+        let div = document.getElementById('missionTarget');
+          let random = Math.floor((Math.random() * json.length)+ 0);
 
-//           div.innerHTML =
-//           `
-//           <h2>Mission Destination</h2>
-//           <ol>
-//               <li>Name: ${json[Number(random)].name} </li>
-//               <li>Diameter: ${json[Number(random)].diameter}</li>
-//               <li>Star: ${json[Number(random)].star}</li><li>Distance from Earth: ${json[Number(random)].distance}</li><li>Number of Moons: ${json[Number(random)].moons} </li></>
-//           </ol>
-//           <img src="${json[Number(random)].image}">`;
+          div.innerHTML =
+          `
+          <h2>Mission Destination</h2>
+          <ol>
+              <li>Name: ${json[Number(random)].name} </li>
+              <li>Diameter: ${json[Number(random)].diameter}</li>
+              <li>Star: ${json[Number(random)].star}</li><li>Distance from Earth: ${json[Number(random)].distance}</li><li>Number of Moons: ${json[Number(random)].moons} </li></>
+          </ol>
+          <img src="${json[Number(random)].image}">`;
 
-//        });
-//         //event.preventDefault();
+       });
+        //event.preventDefault();
 //     })
 // })
 
 //     // formsubmission function below
 
-//      //formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-//         let form = document.querySelector("form");
-//         form.addEventListener('submit', function(event){
-//          event.preventDefault();
+     //formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
+        let form = document.querySelector("form");
+        form.addEventListener('submit', function(event){
+         event.preventDefault();
 
 //     //      //DOM elements here
-//          let pilotName = document.querySelector('input[name=pilotName]');
-//          let pilotValue = pilotInput.value;
-//          let coPilotName = document.querySelector('input[name=coPilotName]');
-//          let fuelLevel = document.querySelector('input[name=fuelLevel]');
-//          let cargoMass = document.querySelector('input[name=cargoMass]');
+         let pilotName = document.querySelector('input[name=pilotName]');
+         //let pilotValue = pilotInput.value;
+         let coPilotName = document.querySelector('input[name=coPilotName]');
+         let fuelLevel = document.querySelector('input[name=fuelLevel]');
+         let cargoMass = document.querySelector('input[name=cargoMass]');
 
-//          let faultyItems = document.querySelector('input[name=faultyItems]');
-//          let pilotStatus = document.querySelector('input[name=pilotStatus]');
-//          let copilotStatus = document.querySelector('input[name=coPilotStatus]');
-//          let fuelStatus = document.querySelector('input[name=fuelStatus]');
-//          let launchStatus = document.querySelector('input[name=launchStatus]');
-//          formSubmission();
-//         });
+         let faultyItems = document.querySelector('input[name=faultyItems]');
+         let pilotStatus = document.querySelector('input[name=pilotStatus]');
+         let copilotStatus = document.querySelector('input[name=coPilotStatus]');
+         let fuelStatus = document.querySelector('input[name=fuelStatus]');
+         let launchStatus = document.querySelector('input[name=launchStatus]');
+         formSubmission();
+        });
+
+    })
+
+})
 
 //      // let submitBtn = document.getElementById('formSubmit');
 //      // submitBtn.addEventListener('click', function(){

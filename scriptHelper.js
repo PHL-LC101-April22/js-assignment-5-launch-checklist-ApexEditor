@@ -56,7 +56,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         //     form.addEventListener("submit", function(event) {
             // event.preventDefault(); 
             console.log('Hello')
-        if (validateInput(pilot) === 'Empty' || coPilotName.value === '' || fuelLevel.value === '' || cargoMass.value === '') {
+        if (validateInput(pilot) === 'Empty' || coPilotName.value === ' ' || fuelLevel.value === ' ' || cargoMass.value === ' ') {
             alert('All fields are REQUIRED!');
            
             
@@ -68,7 +68,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         //         alert('CoPilot Name is not valid please use appropriate letters');
         //         //event.preventDefault();
 
-        //combine with OR
+        //combinefuelLevel.value AND cargoMass.value with an OR operator
              }else if ((isNaN(fuelLevel.value))){
                 alert('Fuel level is not valid please use appropriate numbers');
                 //event.preventDefault();

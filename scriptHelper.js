@@ -61,15 +61,12 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
            
             
     
-        //    if ((pilotName.value) || pilotName === ""){
-        //         alert('Pilot Name is not valid please use appropriate letters');
-        //         //event.preventDefault();
-        //      }else if ((coPilotName.value)){
-        //         alert('CoPilot Name is not valid please use appropriate letters');
-        //         //event.preventDefault();
+           if (isNan(pilotName.value) === false || isNaN(coPilotName.value) === false ){
+                alert('Pilot Name is not valid please use appropriate letters');
+                //event.preventDefault();
 
-        //combinefuelLevel.value AND cargoMass.value with an OR operator
-             }else if ((isNaN(fuelLevel.value))){
+        //combine fuelLevel.value AND cargoMass.value with an OR operator
+             }else if ((isNaN(fuelLevel.value)) === true || isNaN(cargoMass.value) === true){
                 alert('Fuel level is not valid please use appropriate numbers');
                 //event.preventDefault();
              }else if (isNaN(cargoMass.value)){
@@ -106,6 +103,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
          }
     
         }
+    }
     
  
 // Fetch below here

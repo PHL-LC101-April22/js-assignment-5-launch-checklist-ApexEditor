@@ -61,7 +61,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
            
             
     
-           if (isNan(pilotName.value) === false || isNaN(coPilotName.value) === false ){
+           if (isNaN(pilotName.value) === false || isNaN(coPilotName.value) === false ){
                 alert('Pilot Name is not valid please use appropriate letters');
                 //event.preventDefault();
 
